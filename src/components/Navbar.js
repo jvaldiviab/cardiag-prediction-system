@@ -1,16 +1,37 @@
 import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
+import { useCollection } from '../hooks/useCollection'
+import { useState } from 'react'
 
 // statics
 import './Navbar.css'
 import Heart from '../assets/heart-logo.svg'
 // import ActivityIcon from '../assets/activity_icon.svg'
 
+
+const Helper = (user, documents) => {
+
+  if (user === null) return false
+  for (let key in documents) {
+    if (user.uid === documents[key].id) {
+      if (documents[key].rol === 'doctor') {
+        return true
+      }
+    }
+  }
+
+  return false
+
+}
+
 export default function Navbar() {
 
   const { isPending, logout } = useLogout()
   const { user } = useAuthContext()
+
+  const { error, documents } = useCollection('users')
+
 
   let handleClick = e => e.preventDefault();
 
@@ -38,6 +59,14 @@ export default function Navbar() {
 
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
 
+              {
+                Helper(user, documents) &&
+                <>
+                  <li className="nav-item">
+                    <a className="nav-link" aria-current="page" href="https://www.jenkins.io/node/">Dashboard</a>
+                  </li>
+                </>
+              }
 
               {user &&
                 <>

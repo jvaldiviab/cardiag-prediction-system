@@ -10,6 +10,7 @@ export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
+  const [rol, setRol] = useState('normal')
   const [thumbnail, setThumbnail] = useState(null)
   const [thumbnailError, setThumbnailError] = useState(null)
 
@@ -18,7 +19,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    signup(email, password, displayName, thumbnail)
+    signup(email, password, displayName, thumbnail, rol)
   }
 
   const handleThumbnail = (e) => {
@@ -26,17 +27,17 @@ export default function Signup() {
     let selectedFile = e.target.files[0]
 
     // file validations
-    if(!selectedFile) {
+    if (!selectedFile) {
       setThumbnailError('No file selected')
       return
     }
 
-    if(!selectedFile.type.includes('image')) {
+    if (!selectedFile.type.includes('image')) {
       setThumbnailError('Must be an image file')
       return
     }
 
-    if(!selectedFile.size > 100000) {
+    if (!selectedFile.size > 100000) {
       setThumbnailError('File size must be below 100kB')
       return
     }
@@ -44,7 +45,7 @@ export default function Signup() {
     setThumbnailError(null)
     setThumbnail(selectedFile)
   }
-  
+
   return (
     <div>
       <Helmet>
@@ -56,8 +57,8 @@ export default function Signup() {
 
         <label>
           <span>Email:</span>
-          <input 
-            type="email" 
+          <input
+            type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             required
@@ -66,8 +67,8 @@ export default function Signup() {
 
         <label>
           <span>Password:</span>
-          <input 
-            type="password" 
+          <input
+            type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             required
@@ -76,8 +77,8 @@ export default function Signup() {
 
         <label>
           <span>Display Name:</span>
-          <input 
-            type="text" 
+          <input
+            type="text"
             onChange={(e) => setDisplayName(e.target.value)}
             value={displayName}
             required
@@ -86,16 +87,16 @@ export default function Signup() {
 
         <label>
           <span>Profile Thumbnail:</span>
-          <input 
-            type="file" 
+          <input
+            type="file"
             onChange={handleThumbnail}
           />
-          { thumbnailError && <div className="error">{thumbnailError}</div> }
+          {thumbnailError && <div className="error">{thumbnailError}</div>}
         </label>
 
-        { isPending && <button className="btn" disabled>Loading...</button> }
-        { !isPending && <button className="btn">Signup</button> }
-        { error && <div className="error">{ error }</div> }
+        {isPending && <button className="btn" disabled>Loading...</button>}
+        {!isPending && <button className="btn">Signup</button>}
+        {error && <div className="error">{error}</div>}
       </form>
     </div>
   )

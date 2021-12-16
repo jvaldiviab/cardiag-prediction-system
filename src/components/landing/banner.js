@@ -18,7 +18,7 @@ export default function Banner() {
             </div>
             <div className="col-md-4 col-lg-4">
               <h1 className="ban-text"> <span>Cardiag Prediction System</span> </h1>
-              <p className="ban-text"> <strong>Build great things at any scale</strong> </p>
+              <p className="ban-text"> <strong>asdasd</strong> </p>
               <p className="ban-text">The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.</p>
 
             </div>

@@ -37,7 +37,11 @@ function App() {
 						<Routes>
 							<Route
 								path="/"
-								element={!user ? <Navigate to="/login" /> : <Dashboard />}
+								element={<Landing />}
+							/>
+							<Route
+								path="/dashboard"
+								element={<Dashboard />}
 							/>
 							<Route
 								path="/landing"
