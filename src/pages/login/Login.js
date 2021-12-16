@@ -21,14 +21,14 @@ export default function Login() {
   return (
     <div>
       <Helmet>
-        <title>Log In | ProjectGerente</title>
+        <title>Ingresar | CardiagService</title>
       </Helmet>
 
       <div className="outer">
         <div className="inner">
           <form onSubmit={handleSubmit}>
 
-            <h3>Log in</h3>
+            <h3>Ingresar</h3>
 
             <div className="form-group">
               <label>Email</label>
@@ -38,14 +38,14 @@ export default function Login() {
             </div>
 
             <div className="form-group">
-              <label>Password</label>
+              <label>Contraseña</label>
               <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 required />
             </div>
 
-            {isPending && <button type="submit" className="btn btn-dark btn-lg btn-block" disabled>Loading...</button>}
-            {!isPending && <button className="btn btn-dark btn-lg btn-block">Sign in</button>}
+            {isPending && <button type="submit" className="btn btn-dark btn-lg btn-block" disabled>Cargando...</button>}
+            {!isPending && <button className="btn btn-dark btn-lg btn-block">Ingresar</button>}
             {error && <div className="error">{error}</div>}
           </form>
         </div>

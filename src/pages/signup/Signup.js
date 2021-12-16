@@ -49,11 +49,11 @@ export default function Signup() {
   return (
     <div>
       <Helmet>
-        <title>Sign Up | ProjectGerente</title>
+        <title>Registrar | CardiagService</title>
       </Helmet>
 
       <form className="auth-form" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
+        <h2>Registrate</h2>
 
         <label>
           <span>Email:</span>
@@ -66,7 +66,7 @@ export default function Signup() {
         </label>
 
         <label>
-          <span>Password:</span>
+          <span>Contraseña:</span>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -76,7 +76,7 @@ export default function Signup() {
         </label>
 
         <label>
-          <span>Display Name:</span>
+          <span>Usuario:</span>
           <input
             type="text"
             onChange={(e) => setDisplayName(e.target.value)}
@@ -86,7 +86,7 @@ export default function Signup() {
         </label>
 
         <label>
-          <span>Profile Thumbnail:</span>
+          <span>Imagen de Perfil:</span>
           <input
             type="file"
             onChange={handleThumbnail}
@@ -94,8 +94,8 @@ export default function Signup() {
           {thumbnailError && <div className="error">{thumbnailError}</div>}
         </label>
 
-        {isPending && <button className="btn" disabled>Loading...</button>}
-        {!isPending && <button className="btn">Signup</button>}
+        {isPending && <button className="btn btn-dark btn-lg" disabled>Cargando...</button>}
+        {!isPending && <button className="btn btn-dark">Registrar</button>}
         {error && <div className="error">{error}</div>}
       </form>
     </div>

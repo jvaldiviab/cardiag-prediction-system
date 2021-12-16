@@ -17,16 +17,15 @@ export default function Banner() {
               </div>
             </div>
             <div className="col-md-4 col-lg-4">
-              <h1 className="ban-text"> <span>Cardiag Prediction System</span> </h1>
-              <p className="ban-text"> <strong>asdasd</strong> </p>
-              <p className="ban-text">The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.</p>
+              <h1 className="ban-text"> <span>Cardiag Service</span> </h1>
+              <p className="ban-text"> <strong>Lo mejor para tu corazón</strong> </p>
+              <p className="ban-text">Lo mejor que puedes hacer para tu salud es siempre estar prevenido, aqui te ayudaremos a estar preparado</p>
 
             </div>
             <div className="col-md-4 col-lg-4">
               <Video />
             </div>
           </div>
-
         </div>
       </div>
     </div>

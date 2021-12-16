@@ -40,7 +40,7 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top mr-auto">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Cardiag Predict System</a>
+          <a className="navbar-brand" href="/">Cardiag Service</a>
           <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -48,10 +48,10 @@ export default function Navbar() {
 
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle cd" href="/" onClick={handleClick} id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                <img src={Heart} alt="cd.foundation" draggable="false" />
+                Menú
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="https://cd.foundation/">Quienes somos?</a></li>
+                <li><a className="dropdown-item" href="https://cd.foundation/">¿Quienes somos?</a></li>
                 <li><a className="dropdown-item" href="https://jenkins-x.io/">Sobre el proyecto</a></li>
                 <li><a className="dropdown-item" href="https://cloud.google.com/tekton/">Contacto</a></li>
               </ul>
@@ -79,30 +79,17 @@ export default function Navbar() {
                   </li>
                 </>
               }
-
-
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/" onClick={handleClick} id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                  English
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href="">(ES) Spanish</a></li>
-                </ul>
-              </li>
-
-
               {!user &&
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link btn btn-outline-secondary" to="/login">Login</Link>
+                    <Link className="nav-link btn btn-outline-secondary" to="/login">Ingresar</Link>
                   </li>
                 </>
               }
-
               {!user &&
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link btn btn-outline-secondary" to="/signup">Signup</Link>
+                    <Link className="nav-link btn btn-outline-secondary" to="/signup">Registrar</Link>
                   </li>
                 </>
               }
@@ -113,7 +100,7 @@ export default function Navbar() {
                     className="nav-link btn btn-outline-secondary"
                     onClick={logout}
                   >
-                    Logout
+                    Salir
                   </button>
                 }
                 {isPending && user &&
@@ -122,7 +109,7 @@ export default function Navbar() {
                     onClick={logout}
                     disabled
                   >
-                    Logging out...
+                    Regresa Pronto...
                   </button>
                 }
               </li>
