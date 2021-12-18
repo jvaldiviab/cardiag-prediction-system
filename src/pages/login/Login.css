@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  margin-bottom: 10%;
 }
 
 .inner {

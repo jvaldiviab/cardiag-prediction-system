@@ -52,52 +52,50 @@ export default function Signup() {
         <title>Registrar | CardiagService</title>
       </Helmet>
 
-      <form className="auth-form" onSubmit={handleSubmit}>
-        <h2>Registrate</h2>
+      <div className="outer">
+        <div className="inner">
+          <form onSubmit={handleSubmit}>
+            <h3>Register</h3>
 
-        <label>
-          <span>Email:</span>
-          <input
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            required
-          />
-        </label>
+            <div className="form-group">
+              <label>Nombres</label>
+              <input type="text" className="form-control" placeholder="Ingrese sus nombres"
+                onChange={(e) => setDisplayName(e.target.value)}
+                value={displayName}
+                required />
+            </div>
 
-        <label>
-          <span>Contraseña:</span>
-          <input
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            required
-          />
-        </label>
+            <div className="form-group">
+              <label>Email</label>
+              <input type="email" className="form-control" placeholder="Ingrese su email" onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                required />
+            </div>
 
-        <label>
-          <span>Usuario:</span>
-          <input
-            type="text"
-            onChange={(e) => setDisplayName(e.target.value)}
-            value={displayName}
-            required
-          />
-        </label>
+            <div className="form-group">
+              <label>Contraseña</label>
+              <input type="password" className="form-control" placeholder="Ingrese su contraseña"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                required />
+            </div>
+            <div className="form-group">
+              <label>Imagen de Perfil:</label>
+              <input
+                type="file"
+                onChange={handleThumbnail}
+              />
+              {thumbnailError && <div className="error">{thumbnailError}</div>}
+            </div>
 
-        <label>
-          <span>Imagen de Perfil:</span>
-          <input
-            type="file"
-            onChange={handleThumbnail}
-          />
-          {thumbnailError && <div className="error">{thumbnailError}</div>}
-        </label>
+            {isPending && <button type="submit" className="btn btn-dark btn-lg btn-block" disabled>Cargando...</button>}
+            {!isPending && <button className="btn btn-dark btn-lg btn-block">Registrarse</button>}
+            {error && <div className="error">{error}</div>}
 
-        {isPending && <button className="btn btn-dark btn-lg" disabled>Cargando...</button>}
-        {!isPending && <button className="btn btn-dark">Registrar</button>}
-        {error && <div className="error">{error}</div>}
-      </form>
+          </form>
+        </div>
+      </div>
+
     </div>
   )
 }

@@ -63,22 +63,23 @@ export default function Navbar() {
                 Helper(user, documents) &&
                 <>
                   <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="https://www.jenkins.io/node/">Dashboard</a>
+                    <Link className="nav-link" aria-current="page" to="/dashboard">Dashboard</Link>
                   </li>
                 </>
               }
-
               {user &&
                 <>
                   <li className="nav-item">
                     <a className="nav-link" aria-current="page" href="https://www.jenkins.io/node/">Blog</a>
                   </li>
 
-                  <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="https://www.jenkins.io/node/">Service</a>
-                  </li>
+
                 </>
               }
+              <li className="nav-item">
+
+                <Link className="nav-link" to="/service">Service</Link>
+              </li>
               {!user &&
                 <>
                   <li className="nav-item">

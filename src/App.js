@@ -21,6 +21,8 @@ import Landing from './pages/landing/Landing';
 import OnlineUsers from './components/OnlineUsers';
 import NotFound404 from './pages/NotFound404/NotFound404';
 import Footer from './components/Footer';
+import Dash from "./pages/dashboard2/Dash";
+import Prediction from "./pages/ia/Prediction";
 
 
 function App() {
@@ -41,7 +43,10 @@ function App() {
 							/>
 							<Route
 								path="/dashboard"
-								element={<Dashboard />}
+								element={<Dash />}
+							/><Route
+								path="/service"
+								element={<Prediction />}
 							/>
 							<Route
 								path="/landing"
