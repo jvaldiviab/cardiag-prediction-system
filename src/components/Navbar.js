@@ -70,7 +70,7 @@ export default function Navbar() {
               {user &&
                 <>
                   <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="https://www.jenkins.io/node/">Blog</a>
+                    <a className="nav-link" aria-current="page" href="/blog">Blog</a>
                   </li>
 
 
