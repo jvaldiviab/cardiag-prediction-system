@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { styled } from '@material-ui/core/styles';
 import DashboardSidebar from './DashboardSidebar';
-import Prediction from '../ia/Prediction';
 import Patients from './patients/Patients';
 import Doctors from './doctors/Doctors';
 import Profile from './profile/Profile';

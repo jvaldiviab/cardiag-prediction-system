@@ -1,5 +1,5 @@
 import "./banner.css";
-import BannerImage from "../../assets/text.png";
+import BannerImage from "../../assets/sliderImages/slider-corazon.png";
 import Video from "./video";
 
 export default function Banner() {
@@ -17,7 +17,7 @@ export default function Banner() {
               </div>
             </div>
             <div className="col-md-4 col-lg-4">
-              <h1 className="ban-text"> <span>Cardiag Service</span> </h1>
+              <h1 className="ban-text"> <span>Cardiac Service</span> </h1>
               <p className="ban-text"> <strong>Lo mejor para tu corazón</strong> </p>
               <p className="ban-text">Lo mejor que puedes hacer para tu salud es siempre estar prevenido, aqui te ayudaremos a estar preparado</p>
 

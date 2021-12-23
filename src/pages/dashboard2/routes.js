@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom';
-import Prediction from '../ia/Prediction';
+import Prediction from '../Prediction/Prediction';
+
 
 
 import Signup from '../signup/Signup';

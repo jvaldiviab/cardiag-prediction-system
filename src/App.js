@@ -22,8 +22,8 @@ import Blog from './pages/blog/Blog';
 import OnlineUsers from './components/OnlineUsers';
 import NotFound404 from './pages/NotFound404/NotFound404';
 import Footer from './components/Footer';
-import Prediction from "./pages/ia/Prediction";
 import General from "./pages/dashboard2/General";
+import Prediction from "./pages/Prediction/Prediction"
 import DashboardLayout from "./pages/dashboard2/DashboardLayout";
 import { useState } from "react";
 import theme from "./theme";
@@ -34,7 +34,6 @@ import Dash from "./pages/dashboard/Dash";
 function App() {
 	const { user, authIsReady } = useAuthContext();
 
-	const { user, authIsReady } = useAuthContext()
 
 	const [currentContent, setCurrentContent] = useState(1)
 
@@ -86,7 +85,7 @@ function App() {
 								/>
 								<Route
 									path="/blog"
-									element={user ? <Blog /> : <Navigate to="/blog" />}
+									element={<Blog />}
 								/>
 								<Route
 									path="*"

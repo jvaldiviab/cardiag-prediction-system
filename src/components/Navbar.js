@@ -40,7 +40,7 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark top bg-dark fixed-top mr-auto">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Cardiag Service</a>
+          <a className="navbar-brand" href="/">Cardiac Service</a>
           <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -51,9 +51,9 @@ export default function Navbar() {
                 Menú
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="https://cd.foundation/">¿Quienes somos?</a></li>
-                <li><a className="dropdown-item" href="https://jenkins-x.io/">Sobre el proyecto</a></li>
-                <li><a className="dropdown-item" href="https://cloud.google.com/tekton/">Contacto</a></li>
+                <li><a className="dropdown-item" href="">¿Quienes somos?</a></li>
+                <li><a className="dropdown-item" href="">Sobre el proyecto</a></li>
+                <li><a className="dropdown-item" href="">Contacto</a></li>
               </ul>
             </li>
 
@@ -67,15 +67,11 @@ export default function Navbar() {
                   </li>
                 </>
               }
-              {user &&
-                <>
-                  <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="/blog">Blog</a>
-                  </li>
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="/blog">Blog</a>
+              </li>
 
 
-                </>
-              }
               <li className="nav-item">
 
                 <Link className="nav-link" to="/service">Service</Link>

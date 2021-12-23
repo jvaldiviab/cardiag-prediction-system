@@ -17,10 +17,10 @@ export default function SinglePost(props) {
                             {props.title}
                         </h5>
                     </div>
-                    <p className="teaser">
+                    <pre className="teaser">
                         {props.teaser}
                         <span className="more"></span>
-                    </p>
+                    </pre>
                 </a>
                 <div className="attrs">
                     <a href={props.link1}>{props.linkText1}</a>
