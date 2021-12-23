@@ -7,6 +7,7 @@ import Patients from './patients/Patients';
 import Doctors from './doctors/Doctors';
 import Profile from './profile/Profile';
 import AddPatient from './patients/AddPatient';
+import AddDoctor from './doctors/AddDoctor';
 const DashboardLayoutRoot = styled('div')(
   ({ theme }) => ({
     backgroundColor: theme.palette.background.default,
@@ -52,9 +53,10 @@ export default function DashboardLayout({ currentContent, scC }) {
           <DashboardLayoutContent>
 
             {currentContent === 1 && <Patients />}
-            {currentContent === 2 && <Doctors />}
+            {currentContent === 2 && <Doctors sc={scC} />}
             {currentContent === 3 && <Profile />}
             {currentContent === 4 && <AddPatient sc={scC} />}
+            {currentContent === 5 && <AddDoctor sc={scC} />}
 
           </DashboardLayoutContent>
         </DashboardLayoutContainer>

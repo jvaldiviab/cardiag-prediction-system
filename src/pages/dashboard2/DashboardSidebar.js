@@ -40,12 +40,6 @@ const items = [
     val: 2
   },
   {
-    href: '/dashboard/profile',
-    icon: SettingsIcon,
-    title: 'Profile',
-    val: 3
-  },
-  {
     href: '/dashboard/addPatient',
     icon: UserPlusIcon,
     title: 'Add Patient',
@@ -98,13 +92,13 @@ export default function DashboardSidebar({ sc }) {
           color="textPrimary"
           variant="h5"
         >
-          {user.name}
+          {user.displayName}
         </Typography>
         <Typography
-          color="textSecondary"
-          variant="body2"
+          color="textPrimary"
+          variant="h5"
         >
-          {user.jobTitle}
+          {user.email}
         </Typography>
       </Box>
       <Divider />

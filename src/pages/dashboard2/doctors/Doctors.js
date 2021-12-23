@@ -35,9 +35,16 @@ const style = {
   p: 4,
 };
 
-export default function Doctors() {
+export default function Doctors({ sc }) {
 
-  const { documents, error } = useCollection('users')
+  const handleSubmit = () => {
+
+
+    sc(5)
+
+  }
+
+  const { documents, error } = useCollection('doctors')
 
   const customers = documents ? documents.filter(doc => doc.rol === "doctor") : null
 
@@ -99,9 +106,7 @@ export default function Doctors() {
                     >
                       <Box>
                         <Button
-                          onClick={() => {
-                            alert('clicked');
-                          }}
+                          onClick={handleSubmit}
                           color="success"
                           variant="outlined"
                         >

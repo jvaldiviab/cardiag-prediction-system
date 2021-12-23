@@ -48,14 +48,14 @@ export default function ItemDoctor({ item }) {
       >
         <TableCell>
 
-          {item.displayName}
+          {item.nombres}
 
         </TableCell>
         <TableCell>
-          1
+          {item.email}
         </TableCell>
         <TableCell>
-          2
+          {item.telefono}
         </TableCell>
 
       </TableRow>
