@@ -10,7 +10,7 @@ import ProjectFilter from './ProjectFilter'
 import Sidebar from '../../components/Sidebar'
 import OnlineUsers from '../../components/OnlineUsers'
 
-export default function Dashboard() {
+export default function Dash() {
 
   const { user } = useAuthContext()
 
