@@ -3,13 +3,14 @@ import "jquery/dist/jquery.min.js";
 import "popper.js/dist/popper.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { useAuthContext } from './hooks/useAuthContext';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
 
 // css
-import './App.css'
+import "./App.css";
 
 // components
+
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Create from './pages/create/Create';
@@ -30,10 +31,13 @@ import theme from "./theme";
 import { ThemeProvider } from '@material-ui/core';
 import Dash from "./pages/dashboard/Dash";
 
+import Prediction from "./pages/Prediction/Prediction";
+
 
 function App() {
+  const { user, authIsReady } = useAuthContext();
 
-	const { user, authIsReady } = useAuthContext()
+
 
 	const [currentContent, setCurrentContent] = useState(1)
 
@@ -102,4 +106,4 @@ function App() {
 	);
 }
 
-export default App
+export default App;
