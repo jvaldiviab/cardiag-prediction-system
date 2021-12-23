@@ -18,6 +18,7 @@ import Login from './pages/login/Login';
 import Project from './pages/project/Project';
 import Signup from './pages/signup/Signup';
 import Landing from './pages/landing/Landing';
+import Blog from './pages/blog/Blog';
 import OnlineUsers from './components/OnlineUsers';
 import NotFound404 from './pages/NotFound404/NotFound404';
 import Footer from './components/Footer';
@@ -81,6 +82,10 @@ function App() {
 								<Route
 									path="/projects/:id"
 									element={user ? <Project /> : <Navigate to="/login" />}
+								/>
+								<Route
+									path="/blog"
+									element={user ? <Blog /> : <Navigate to="/blog" />}
 								/>
 								<Route
 									path="*"
